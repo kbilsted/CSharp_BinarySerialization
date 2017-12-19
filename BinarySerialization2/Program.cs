@@ -14,9 +14,10 @@ namespace BinarySerialization2
             if (Class1.Version == 1)
             {
                 Console.WriteLine("Writing data");
-                File.WriteAllBytes(path, SerializeHelper<Class1>.Serialize(new Class1() { SomeInt = 42, SomeString = "HelloWorld", Next = new Class1() { SomeInt = 3, SomeString = "Boo" } }));
+                File.WriteAllBytes(path, SerializeHelper<Class1>.Serialize(new Class1() {  SomeString = "HelloWorld", Next = new Class1() {  SomeString = "Boo" } }));
             }
 
+            Console.WriteLine(Class1.Version);
             Console.WriteLine(SerializeHelper<Class1>.Deserialize(File.ReadAllBytes(path)).ToString());
         }
     }

@@ -5,7 +5,7 @@ namespace Data
     [Serializable]
     public class Class1
     {
-        public const int Version = 3;
+        public const int Version = 4;
 
         public string SomeString;
         public int SomeInt;
